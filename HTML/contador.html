@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    background: rgb(110, 104, 104);
+   
+    font: normal 15pt arial;
+}
+        header{
+text-align: center;
+}
+section{
+background: white;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541);
+text-align: center;
+}
+section input {
+    width: 100px;
+    height: 100px;
+    font-size: 20pt;
+}
+div {
+    font-size: 30pt;
+    margin-bottom: 15px;
+}
+footer{
+text-align: center;
+font-style: italic;
+margin-top: 15px;
+ }</style>
+</head>
+<body>
+    <header>
+        <h1>Controlador de fluxo.</h1>
+    </header>
+    <section>
+        <h2>Numero de pessoas</h2>
+       <div id="numero">
+
+       </div>
+        <input type="button" value="entrar" onclick="entrar()">
+        <input type="button" value="sair" onclick="sair()">
+    </section>
+    <footer>
+        JFKtecnologia
+    </footer>
+   <script>
+       var div = document.querySelector("div#numero")
+var pergunta = window.prompt("Qual o numero atual de pessoas?")
+var pessoasAG = Number(pergunta)
+div.innerHTML = `${pessoasAG}`
+function entrar() {
+  div.innerHTML = " "
+  pessoasAG++
+  div.innerHTML = `${pessoasAG}`
+}
+function sair() {
+  pessoasAG -- 
+  div.innerHTML = `${pessoasAG}`
+}
+
+   </script>
+</body>
+</html>
